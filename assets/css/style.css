@@ -1,3 +1,8 @@
+* {
+
+    box-sizing: border-box;
+}
+
 h1,
 h2,
 h3 {
@@ -204,7 +209,6 @@ img {
     width: 100%;
     max-width: 880px;
     margin: 12px 40px 0px 40px;
-    box-sizing: border-box;
 }
 
 .form {
@@ -371,7 +375,7 @@ For the About and Contact pages - the position needed to be fixed in order to st
     }
 
     body #wrapper {
-        width: 768px;
+        min-width: 768px;
         height: relative;
     }
 
@@ -425,46 +429,41 @@ For the About and Contact pages - the position needed to be fixed in order to st
 /*******************************************************************************/
 @media (max-width: 640px) {
 
+    .block,
+    body header,
+    .contact,
+    form,
     body {
-        width: 640px;
-        overflow: scroll;
-        height: relative;
-    }
-
-    #wrapper {
-        width: 100%;
+        max-width: 600px;
+        min-width: 580px;
     }
 
     .block {
-        margin-left: 20px;
-        margin-right: 20px;
-        width: 600px;
+        border-bottom: 0;
     }
 
-    hr {
-        margin: 0 20px 0 20px;
+    .nametag {
+        max-width: 600px;
     }
 
-    h1 {
-        padding-left: 20px;
-    }
-
-    .contact {
-        clear: both;
-        width: 80%;
+    nav {
+        float: none;
     }
 
     .box-set {
-        margin-bottom: 55px;
+        max-width: 600px;
     }
 
-    .portfoliofooter {
-        clear: both;
-        position: static;
+    footer {
+        flex: bottom;
         min-width: 640px;
         margin: 0;
     }
 
-
+    .portfoliofooter {
+        position: static;
+        min-width: 640px;
+        margin: 0;
+    }
 
 }
