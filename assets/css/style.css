@@ -308,7 +308,7 @@ For the About and Contact pages - the position needed to be fixed in order to st
 
 /* media query for screens 980 and less for desktops */
 
-@media (max-width: 980px) {
+@media (min-width: 769px) and (max-width: 980px) {
 
     body {
         overflow: scroll;
@@ -368,7 +368,7 @@ For the About and Contact pages - the position needed to be fixed in order to st
 
 /* media query for screens 768 and less for ipads */
 
-@media (max-width: 768px) {
+@media (min-width: 641px) and (max-width: 768px) {
 
     body {
         overflow: scroll;
@@ -427,37 +427,58 @@ For the About and Contact pages - the position needed to be fixed in order to st
 
 /* media query for screens 640px and less for iphones */
 /*******************************************************************************/
-@media (max-width: 640px) {
+@media (min-width: 300px) and (max-width: 640px) {
 
-    .block,
-    body header,
-    .contact,
-    form,
+    #wrapper {
+        width: 640px;
+        height: 132px;
+    }
+
+    hr {
+        width: 420px;
+    }
+
     body {
-        max-width: 600px;
-        min-width: 580px;
+        width: 640px;
+        height: 100vh;
     }
 
     .block {
-        border-bottom: 0;
-    }
-
-    .nametag {
-        max-width: 600px;
-    }
-
-    nav {
-        float: none;
+        width: 500px;
+        margin-bottom: 125px;
     }
 
     .box-set {
-        max-width: 600px;
+        width: 500px;
+    }
+
+    .form {
+        width: 420px;
+    }
+
+    .nametag h1 {
+        text-align: center;
+        width: 640px;
+    }
+
+    nav {
+        text-align: center;
+        width: 640px;
+        margin: 0 auto;
+    }
+
+    .box {
+        float: none;
+        margin: 0 auto;
+        margin-bottom: 40px;
     }
 
     footer {
-        flex: bottom;
-        min-width: 640px;
+        position: static;
+        width: 640px;
         margin: 0;
+        align-content: flex-end;
+
     }
 
     .portfoliofooter {
